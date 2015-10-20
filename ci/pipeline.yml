@@ -16,3 +16,12 @@ resources:
   source:
     uri: git@github.com:opencontrol/concourse-spruce-task.git
     branch: master
+    private_key: {{github-private-key}}
+
+- name: docker-image
+  type: docker-image
+  source:
+    email: {{docker-hub-email}}
+    username: {{docker-hub-username}}
+    password: {{docker-hub-password}}
+    repository: {{docker-concourse-spruce-image}}

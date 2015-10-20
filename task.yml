@@ -1,10 +1,11 @@
 ---
 platform: linux
 
-image: docker:///ubuntu#14.04
+image: docker:///opencontrol/spruce
 
 inputs:
 - name: my-repo
 
 run:
-  path: ./spruce-up.sh my-repo
+  path: spruce
+  args: ["merge", "my-repo/*.yml"]
